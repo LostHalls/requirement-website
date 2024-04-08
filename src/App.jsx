@@ -27,6 +27,8 @@ import {
 import CustomTabPanel from './components/CustomTabPanel'
 import CustomScrollableList from './components/CustomScrollableList'
 
+import settings from './settings.json' with { type: 'json' };
+
 const validIGN = (ign) => {
   return /^[a-zA-Z0-9]{1,17}$/.test(ign)
 }
@@ -175,7 +177,7 @@ function App() {
 
       fetch(
         `${
-          import.meta.env.VITE_USER_FETCH_LOCATION
+          settings.fetchUri
         }?url=https://www.realmeye.com/player/${encodeURIComponent(
           realmEyeIGN
         )}`
