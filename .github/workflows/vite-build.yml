@@ -10,7 +10,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      VITE_USER_FETCH_LOCATION: "https://reqs.pubhalls.com"
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
