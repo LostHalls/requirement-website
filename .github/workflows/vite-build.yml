@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      VITE_USER_FETCH_LOCATION: "https://reqs.pubhalls.com"
+      VITE_USER_FETCH_LOCATION: "https://reqs.pubhalls.com/api/get_player_data"
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
